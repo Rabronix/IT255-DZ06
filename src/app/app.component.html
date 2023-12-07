@@ -1,0 +1,18 @@
+<form class="form segment">
+  <h2 class="header">Add a room</h2>
+
+  <div class="field">
+    <label for="roomNumber">Room number:</label>
+    <input name="roomNumber" #number/>
+  </div>
+  <div class="field">
+    <label for="price">Room price:</label>
+    <input name="price" #price/>
+  </div>
+
+  <button (click)="addRoom(number, price)" class="button">Add a room</button>
+</form>
+<div class="ui grid posts">
+  <app-room *ngFor="let room of rooms" [room]="room"></app-room>
+</div>
+  
